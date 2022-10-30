@@ -1,5 +1,3 @@
-import './App.css';
-
 // we no longer required to import React for latest version
 // in order to have jsx run
 // import React from 'react'
