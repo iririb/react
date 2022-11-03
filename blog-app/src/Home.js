@@ -5,11 +5,14 @@ const Home = () => {
     const [blogs, setBlogs] = useState([
         { title: 'New Journey', body: 'Not start yet...', author: 'Ghost writer', id: 1 },
         { title: 'New Journey2', body: 'Not start yet2...', author: 'Ghost writer', id: 2 },
-        { title: 'New Journey3', body: 'Not start yet3...', author: 'Ghost writer', id: 3 }
+        { title: 'New Journey3', body: 'Not start yet3...', author: 'Ghost writer', id: 3 },
+        { title: 'New Journey someone1', body: 'Not start yet3...', author: 'someone', id: 4 },
+        { title: 'New Journey someone2', body: 'Not start yet3...', author: 'someone', id: 5 }
     ])
     return (
         <div className="home">
-            <BlogList blogs={blogs} title="All Blogs!!!"/>
+            <BlogList blogs={blogs} title="All Blogs!!!" />
+            <BlogList blogs={blogs.filter((blog) => blog.author === 'someone')} title="Someone blogs!!!" />
         </div>
     );
 }
