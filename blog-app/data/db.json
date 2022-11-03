@@ -1,0 +1,22 @@
+{
+    "blogs": [
+        {
+            "title": "New Journey",
+            "body": "Not start yet...",
+            "author": "Ghost writer",
+            "id": 1
+        },
+        {
+            "title": "New Journey2",
+            "body": "Not start yet2...",
+            "author": "Ghost writer",
+            "id": 2
+        },
+        {
+            "title": "New Journey3",
+            "body": "Not start yet3...",
+            "author": "someone",
+            "id": 3
+        }
+    ]
+}
