@@ -3,6 +3,7 @@ import BlogList from './BlogList';
 
 const Home = () => {
     const [blogs, setBlogs] = useState(null)
+    const [isPending, setIsPending] = useState(true)
 
     useEffect(() => {
         fetch('http://localhost:8000/blogs')
@@ -11,12 +12,13 @@ const Home = () => {
             })
             .then((data)=>{
                 setBlogs(data)
+                setIsPending(false)
             })
     }, [])
 
     return (
         <div className="home">
-            {/* we need to check blogs whether it's null or not else it will become error due to map function cannot handle null object the first application initilize */}
+            {isPending && <div>Loading...</div>}
             {blogs && <BlogList blogs={blogs} title="All Blogs!!!"/>}
         </div>
     );
