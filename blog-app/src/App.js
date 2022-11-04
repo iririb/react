@@ -3,18 +3,24 @@
 // import React from 'react'
 
 import Navbar from './Navbar'
-import Home from'./Home'
+import Home from './Home'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
 
 function App() {
   return (
-    // className will become class
-    // we can't use class because it a reserve keyword
-    <div className="App">
-      <Navbar />
-      <div className="content">
-        <Home />
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Switch>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
